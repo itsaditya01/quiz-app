@@ -8,7 +8,10 @@
       <div v-for="quiz in quizes" class="card mb-3 mt-3">
         <div class="card-body">
           <h5 class="card-title">{{ quiz.category }}</h5>
-          <p class="card-text">Duration: {{ quiz.duration_m }} Minutes</p>
+          <p class="text-secondary">By {{ quiz.name }}</p>
+          <p class="card-text text-danger">
+            Duration: {{ quiz.duration_m }} Minutes
+          </p>
           <button @click="StartQuiz(quiz.id)" class="btn btn-primary">
             Start quiz
           </button>
